@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3T7JTENS3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L3T7JTENS3');
+</script>	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Wenzhou | Landing Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow-x: hidden;
+      background: #111;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background-image: url("images/11.png");
+      background-position: 20% 5%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      animation: fadeUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  letter-spacing: 8px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+    .hero p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 34px;
+  opacity: 0.9;
+}
+
+    .btn {
+      display: inline-block;
+      padding: 14px 34px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: white;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.28);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+   .scroll-text {
+font-family: 'Inter', sans-serif;
+position: absolute;
+bottom: 45px;
+left: 50%;
+transform: translate(-50%, 0);
+font-size: 10px;
+letter-spacing: 6px;
+opacity: 0.5;
+text-transform: uppercase;
+white-space: nowrap;
+}
+  z-index: 2;
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.scroll-text:hover {
+  opacity: 1;
+}
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 56px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 680px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 24px;
+        background-position: center center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+		  text-transform: uppercase;
+      }
+
+      .hero p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 26px;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+
+      .scroll-text {
+  font-family: 'Inter', sans-serif;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 4px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>WENZHOU</h1>
+      <p>
+        Discover the soul of my hometown through its mountains, rivers, history, and poetic landscapes.
+      </p >
+      <a href="wenzhou.html" class="btn">Learn More</a >
+    </div>
+
+    <div class="scroll-text">EXPLORE WENZHOU</div>
+  </section>
+
+</body>
+</html>
