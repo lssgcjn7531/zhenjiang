@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3T7JTENS3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L3T7JTENS3');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wenzhou Impressions - 温州印象</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+	<style>
+		/* ========================================
+   Wenzhou Impressions
+   ======================================== */
+
+/* CSS Variables */
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-wenzhou-ink: #1a1a1a;
+  --color-wenzhou-paper: #f5f2ed;
+  --color-wenzhou-accent: #8b2626;
+  --color-wenzhou-gold: #c5a059;
+  
+  --color-dark: #050505;
+  --color-white: #ffffff;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-slower: 0.7s ease;
+  --transition-slowest: 1s ease;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-wenzhou-paper);
+  color: var(--color-wenzhou-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+.italic-light {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.italic-gold {
+  font-style: italic;
+  color: var(--color-wenzhou-gold);
+}
+
+.accent-red {
+  color: var(--color-wenzhou-accent);
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-wenzhou-gold);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleRotate {
+  from {
+    opacity: 0;
+    transform: scale(0.9) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px) translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px) translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.animate-slide-left {
+  animation: slideLeft 1s ease forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scaleIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.animate-scale-rotate {
+  animation: scaleRotate 1s ease forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.4s;
+}
+
+.delay-4 {
+  animation-delay: 0.5s;
+}
+
+/* Scroll Animation Classes */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   HERO SECTION - CAROUSEL
+   ======================================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.107), rgba(0, 0, 0, 0.074));
+  z-index: 1;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 20;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.4);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.indicator.active {
+  background-color: white;
+  border-color: var(--color-wenzhou-gold);
+  transform: scale(1.2);
+}
+
+/* Carousel Controls */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.carousel-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.carousel-prev {
+  left: 1.5rem;
+}
+
+.carousel-next {
+  right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .carousel-btn {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .carousel-prev {
+    left: 2rem;
+  }
+  
+  .carousel-next {
+    right: 2rem;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-subtitle {
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-sans);
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.hero-description {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 8rem;
+  }
+}
+
+/* ========================================
+   HISTORY SECTION
+   ======================================== */
+.history {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 8rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.history-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.history-grid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .history-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.history-text {
+  position: relative;
+  z-index: 10;
+}
+
+.history-title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .history-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .history-title {
+    font-size: 6rem;
+  }
+}
+
+.history-paragraphs {
+  space-y: 1.5rem;
+}
+
+.history-paragraphs p {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  max-width: 28rem;
+  margin-bottom: 1.5rem;
+}
+
+.history-accent {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.accent-line {
+  width: 6rem;
+  height: 1px;
+  background-color: var(--color-wenzhou-gold);
+}
+
+.accent-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-wenzhou-gold);
+}
+
+.history-images {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .history-images {
+    height: 800px;
+  }
+}
+
+.history-main-img {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px 9999px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.history-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  mix-blend-mode: luminosity;
+  transition: all 0.7s ease;
+}
+
+.history-main-img:hover img {
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.img-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-dark), transparent, transparent);
+}
+
+.history-secondary-img {
+  position: absolute;
+  bottom: -2.5rem;
+  left: -2.5rem;
+  width: 16rem;
+  height: 20rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 4px solid var(--color-dark);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  display: none;
+}
+
+.history-secondary-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .history-secondary-img {
+    display: block;
+  }
+}
+
+/* ========================================
+   ATTRACTIONS SECTION
+   ======================================== */
+.attractions {
+  padding: 8rem 1.5rem;
+  background-color: var(--color-wenzhou-paper);
+  color: var(--color-wenzhou-ink);
+}
+
+.attractions-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.attractions-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.attractions-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .attractions-title {
+    font-size: 4.5rem;
+  }
+}
+
+.attractions-subtitle {
+  color: var(--color-gray-600);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .attractions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.attraction-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background-color: var(--color-gray-200);
+  aspect-ratio: 3/4;
+  cursor: pointer;
+}
+
+.attraction-large {
+  aspect-ratio: 4/3;
+}
+
+@media (min-width: 768px) {
+  .attraction-large {
+    grid-column: span 2;
+    aspect-ratio: 21/9;
+  }
+}
+
+.attraction-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.attraction-card:hover .attraction-img {
+  transform: scale(1.05);
+}
+
+.attraction-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.attraction-card:hover .attraction-overlay {
+  opacity: 0.9;
+}
+
+.attraction-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .attraction-content {
+    padding: 2.5rem;
+  }
+}
+
+.attraction-subtitle {
+  color: var(--color-wenzhou-gold);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  transform: translateY(1rem);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.attraction-card:hover .attraction-subtitle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.attraction-name {
+  font-size: 1.875rem;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .attraction-name {
+    font-size: 2.25rem;
+  }
+}
+
+.attraction-desc {
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  max-width: 28rem;
+  transform: translateY(1rem);
+  opacity: 0;
+  transition: all 0.5s ease 0.075s;
+}
+
+@media (min-width: 768px) {
+  .attraction-desc {
+    font-size: 1rem;
+  }
+}
+
+.attraction-card:hover .attraction-desc {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ========================================
+   GASTRONOMY SECTION
+   ======================================== */
+.gastronomy {
+  padding: 8rem 1.5rem;
+  background-color: var(--color-wenzhou-accent);
+  color: var(--color-wenzhou-paper);
+  overflow: hidden;
+}
+
+.gastronomy-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.gastronomy-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .gastronomy-grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 3rem;
+  }
+}
+
+.gastronomy-text {
+  order: 2;
+}
+
+@media (min-width: 1024px) {
+  .gastronomy-text {
+    order: 1;
+  }
+}
+
+.gastronomy-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .gastronomy-title {
+    font-size: 4.5rem;
+  }
+}
+
+.gastronomy-intro {
+  color: rgba(245,242,237,0.8);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.food-item {
+  border-top: 1px solid rgba(245,242,237,0.2);
+  padding-top: 2rem;
+}
+
+.food-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.food-desc {
+  color: rgba(245,242,237,0.7);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+}
+
+.gastronomy-images {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .gastronomy-images {
+    height: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gastronomy-images {
+    order: 2;
+  }
+}
+
+.food-main-img {
+  position: absolute;
+  width: 80%;
+  height: 70%;
+  z-index: 20;
+  border-radius: 3rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  border: 4px solid rgba(245,242,237,0.1);
+}
+
+.food-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-secondary-img-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 40%;
+  z-index: 999;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);
+}
+
+.food-secondary-img-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-secondary-img-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 45%;
+  z-index: 30;
+  border-radius: 9999px 9999px 0 9999px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);
+  border: 4px solid var(--color-wenzhou-accent);
+}
+
+.food-secondary-img-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================================
+   LOCATION SECTION
+   ======================================== */
+.location {
+  padding: 8rem 1.5rem;
+  background-color: var(--color-wenzhou-ink);
+  color: var(--color-wenzhou-paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.location-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.location-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.location-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.location-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-wenzhou-gold);
+}
+
+.location-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .location-title {
+    font-size: 4.5rem;
+  }
+}
+
+.location-desc {
+  color: var(--color-gray-400);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.location-map {
+  width: 100%;
+  height: 500px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  position: relative;
+  background-color: var(--color-dark);
+}
+
+@media (min-width: 768px) {
+  .location-map {
+    height: 600px;
+  }
+}
+
+.map-shadow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%) contrast(1.25);
+  opacity: 0.7;
+  transition: all 1s ease;
+}
+
+.location-map:hover .map-iframe {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ========================================
+   EXPLORE SECTION (AI Search)
+   ======================================== */
+.explore {
+  padding: 6rem 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.explore-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.explore-title {
+  font-size: 2.25rem;
+  color: var(--color-wenzhou-ink);
+  margin-bottom: 1rem;
+}
+
+.explore-subtitle {
+  color: var(--color-gray-600);
+  font-family: var(--font-sans);
+}
+
+.explore-form {
+  position: relative;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+}
+
+.explore-input {
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 9999px;
+  padding: 1rem 1.5rem;
+  padding-right: 4rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  font-family: var(--font-sans);
+}
+
+.explore-input:focus {
+  outline: none;
+  border-color: var(--color-wenzhou-accent);
+  box-shadow: 0 0 0 3px rgba(139,38,38,0.1);
+}
+
+.explore-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background-color: var(--color-wenzhou-ink);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: var(--color-wenzhou-accent);
+}
+
+.explore-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.explore-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.loader-icon {
+  animation: spin 1s linear infinite;
+}
+
+.explore-response {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-gray-100);
+  animation: fadeUp 0.5s ease;
+}
+
+.response-content {
+  font-family: var(--font-sans);
+  color: var(--color-gray-700);
+  line-height: 1.75;
+}
+
+.response-content h1,
+.response-content h2,
+.response-content h3,
+.response-content h4 {
+  font-family: var(--font-serif);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.response-content p {
+  margin-bottom: 1rem;
+}
+
+.response-content ul,
+.response-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.response-content li {
+  margin-bottom: 0.5rem;
+}
+
+.response-content strong {
+  font-weight: 600;
+}
+
+.response-content em {
+  font-style: italic;
+}
+
+.response-content a {
+  color: var(--color-wenzhou-accent);
+  text-decoration: underline;
+}
+
+.response-sources {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.sources-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-400);
+  margin-bottom: 1rem;
+}
+
+.sources-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sources-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sources-list li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-wenzhou-accent);
+  flex-shrink: 0;
+}
+
+.sources-list a {
+  color: var(--color-wenzhou-accent);
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sources-list a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   ITINERARY SECTION
+   ======================================== */
+.itinerary {
+  padding: 6rem 1.5rem;
+  background-color: var(--color-wenzhou-ink);
+  color: var(--color-wenzhou-paper);
+}
+
+.itinerary-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.itinerary-grid {
+  display: grid;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .itinerary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.itinerary-title {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .itinerary-title {
+    font-size: 3rem;
+  }
+}
+
+.itinerary-intro {
+  color: var(--color-gray-400);
+  font-family: var(--font-sans);
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
+
+/* Culture Topics */
+.culture-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.culture-topic {
+  background-color: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.culture-topic:hover {
+  background-color: rgba(255,255,255,0.08);
+  border-color: rgba(197,160,89,0.3);
+  transform: translateX(5px);
+}
+
+.topic-title {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-wenzhou-gold);
+  margin-bottom: 0.5rem;
+}
+
+.topic-desc {
+  color: var(--color-gray-400);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Culture Showcase */
+.culture-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.culture-card {
+  background-color: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.culture-card:hover {
+  background-color: rgba(255,255,255,0.08);
+  border-color: rgba(197,160,89,0.3);
+}
+
+.culture-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-wenzhou-gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(197,160,89,0.3);
+}
+
+.culture-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.culture-list li {
+  color: var(--color-gray-300);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.culture-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-wenzhou-gold);
+}
+
+.culture-list strong {
+  color: white;
+  font-weight: 500;
+}
+
+.itinerary-form {
+  background-color: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-300);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-select,
+.form-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 0.5rem;
+  color: white;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-wenzhou-gold);
+}
+
+.form-select option {
+  background-color: var(--color-wenzhou-ink);
+}
+
+.form-input::placeholder {
+  color: var(--color-gray-600);
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-wenzhou-gold);
+  color: var(--color-wenzhou-ink);
+  font-weight: 600;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+  background-color: white;
+}
+
+.generate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.generate-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.itinerary-result-section {
+  height: 100%;
+}
+
+.itinerary-result-placeholder {
+  height: 100%;
+  min-height: 400px;
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-500);
+  padding: 2rem;
+  text-align: center;
+}
+
+.map-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.placeholder-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.placeholder-desc {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.itinerary-content {
+  background-color: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  max-height: 600px;
+  overflow-y: auto;
+  animation: fadeUp 0.5s ease;
+}
+
+.itinerary-content h1,
+.itinerary-content h2,
+.itinerary-content h3,
+.itinerary-content h4 {
+  font-family: var(--font-serif);
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.itinerary-content h1 {
+  font-size: 1.875rem;
+}
+
+.itinerary-content h2 {
+  font-size: 1.5rem;
+  color: var(--color-wenzhou-gold);
+}
+
+.itinerary-content h3 {
+  font-size: 1.25rem;
+}
+
+.itinerary-content p {
+  font-family: var(--font-sans);
+  color: var(--color-gray-300);
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.itinerary-content ul,
+.itinerary-content ol {
+  font-family: var(--font-sans);
+  color: var(--color-gray-300);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.itinerary-content li {
+  margin-bottom: 0.5rem;
+}
+
+.itinerary-content strong {
+  color: white;
+  font-weight: 600;
+}
+
+.itinerary-content em {
+  font-style: italic;
+  color: var(--color-wenzhou-gold);
+}
+
+.itinerary-content a {
+  color: var(--color-wenzhou-gold);
+  text-decoration: underline;
+}
+
+.itinerary-content blockquote {
+  border-left: 3px solid var(--color-wenzhou-gold);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--color-gray-400);
+}
+
+.itinerary-content code {
+  background-color: rgba(255,255,255,0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.itinerary-content pre {
+  background-color: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.itinerary-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.itinerary-content hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 2rem 0;
+}
+
+/* ========================================
+   VIDEO SECTION
+   ======================================== */
+.video-section {
+  padding: 6rem 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.video-container {
+  background-color: white;
+  border-radius: 2.5rem;
+  padding: 2rem;
+  border: 1px solid var(--color-gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .video-container {
+    padding: 3rem;
+  }
+}
+
+.video-bg-blur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background-color: var(--color-wenzhou-paper);
+  border-radius: 50%;
+  filter: blur(64px);
+  margin-right: -5rem;
+  margin-top: -5rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.video-content {
+  position: relative;
+  z-index: 10;
+}
+
+.video-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.video-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(139,38,38,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-wenzhou-accent);
+  flex-shrink: 0;
+}
+
+.video-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.video-title {
+  font-size: 1.875rem;
+  color: var(--color-wenzhou-ink);
+}
+
+.video-subtitle {
+  color: var(--color-gray-500);
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  margin-top: 0.25rem;
+}
+
+.video-player-wrapper {
+  margin-bottom: 2rem;
+}
+
+.video-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: var(--color-dark);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.video-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.9);
+  color: var(--color-wenzhou-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.video-play-btn:hover {
+  transform: scale(1.1);
+  background-color: white;
+}
+
+.video-play-btn svg {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.video-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--color-gray-50);
+  border-radius: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-wenzhou-accent);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.video-description {
+  color: var(--color-gray-600);
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .video-stats {
+    padding: 2rem;
+  }
+  
+  .stat-value {
+    font-size: 2.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+  }
+  
+  .video-description {
+    font-size: 1.125rem;
+  }
+}
+
+/* ========================================
+   MUSIC PLAYER SECTION (Deprecated)
+   ======================================== */
+.music-player {
+  padding: 6rem 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.music-container {
+  background-color: white;
+  border-radius: 2.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+  border: 1px solid var(--color-gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .music-container {
+    padding: 3rem;
+  }
+}
+
+.music-bg-blur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background-color: var(--color-wenzhou-paper);
+  border-radius: 50%;
+  filter: blur(64px);
+  margin-right: -5rem;
+  margin-top: -5rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.music-content {
+  position: relative;
+  z-index: 10;
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.music-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(139,38,38,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-wenzhou-accent);
+  flex-shrink: 0;
+}
+
+.music-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.music-title {
+  font-size: 1.875rem;
+  color: var(--color-wenzhou-ink);
+}
+
+.music-subtitle {
+  color: var(--color-gray-500);
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  margin-top: 0.25rem;
+}
+
+.music-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.music-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.music-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.music-textarea {
+  width: 100%;
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 1rem;
+  padding: 1rem;
+  resize: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-sans);
+}
+
+.music-textarea:focus {
+  outline: none;
+  border-color: var(--color-wenzhou-accent);
+  box-shadow: 0 0 0 3px rgba(139,38,38,0.1);
+}
+
+.music-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .music-controls {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.generate-music-btn {
+  padding: 1rem 2rem;
+  background-color: var(--color-wenzhou-ink);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.generate-music-btn:hover {
+  background-color: var(--color-wenzhou-accent);
+}
+
+.generate-music-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.generate-music-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  background-color: var(--color-gray-50);
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-gray-200);
+}
+
+@media (min-width: 640px) {
+  .audio-player {
+    width: auto;
+    margin-left: auto;
+  }
+}
+
+.play-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-wenzhou-ink);
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.play-btn:hover {
+  color: var(--color-wenzhou-accent);
+}
+
+.play-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.play-icon {
+  margin-left: 2px;
+}
+
+.player-status {
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  white-space: nowrap;
+}
+
+.download-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-400);
+  transition: color 0.3s ease;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .download-btn {
+    margin-left: 1rem;
+  }
+}
+
+.download-btn:hover {
+  color: var(--color-wenzhou-ink);
+}
+
+.download-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background-color: var(--color-wenzhou-ink);
+  color: var(--color-gray-400);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========================================
+   SELECTION STYLES
+   ======================================== */
+::selection {
+  background-color: var(--color-wenzhou-accent);
+  color: white;
+}
+
+/* ========================================
+   FOCUS STYLES
+   ======================================== */
+:focus-visible {
+  outline: 2px solid var(--color-wenzhou-gold);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+<style>
+
+.hero {
+    position: relative;
+}
+
+.top-buttons {
+position: absolute;
+top: 30px;
+left: 30px;
+right: 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 999;
+}
+
+.nav-left,
+.nav-right {
+display: flex;
+gap: 12px;
+}
+.pill-btn {
+    background: rgba(0,0,0,0.28);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.22);
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.30);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.pill-btn:hover {
+    background: rgba(0,0,0,0.42);
+    border: 1px solid rgba(255,255,255,0.35);
+    transform: translateY(-1px);
+}
+@media screen and (max-width: 768px) {
+
+.top-buttons{
+    top: 16px !important;
+    left: 12px !important;
+    right: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+}
+
+.nav-left,
+.nav-right{
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+
+.nav-right{
+    width: 100% !important;
+}
+
+.pill-btn{
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+}
+
+}
+ .hero-description {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 760px;
+    margin: 18px auto 0;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.22);
+    padding: 14px 22px;
+    border-radius: 14px;
+    backdrop-filter: blur(4px);
+}
+        
+</style>
+    
+</head>
+
+<body>
+    <!-- Hero Section - Carousel -->
+    <section class="hero">
+		<div class="top-buttons">
+    <div class="nav-left">
+       <a href="https://zh.wikipedia.org/wiki/%E6%B8%A9%E5%B7%9E%E5%B8%82" class="pill-btn">About</a >
+    <a href="mailto:i25037069@stduent.newinti.edu.my" class="pill-btn">Contact</a >
+    <a href="https://lssgcjn7531.github.io/pay-in-wechat/" class="pill-btn">Pay</a >
+    </div>
+
+    <div class="nav-right">
+        <a href="index.html" class="pill-btn">Back Home</a >
+    </div>
+</div>
+        <div class="hero-carousel">
+            <div class="carousel-slide active">
+                <img src="./images/lunbo1.jpeg" alt="Wenzhou Cityscape" class="hero-img" referrerpolicy="no-referrer">
+            </div>
+            <div class="carousel-slide">
+                <img src="./images/lunbo2.jpg" alt="Wenzhou Bridge" class="hero-img" referrerpolicy="no-referrer">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-btn carousel-prev" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-btn carousel-next" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+        <div class="hero-content">
+            <div class="hero-text animate-fade-up">
+                <p class="hero-subtitle">Zhejiang, China</p>
+                <h1 class="hero-title">Wenzhou</h1>
+                <p class="hero-description">
+                    A city of mountains, rivers, and entrepreneurial spirit. Discover the poetry of the Oujiang River
+                    and the majesty of Yandang Mountain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history">
+        <div class="history-container">
+            <div class="history-grid">
+                <div class="history-text animate-slide-left">
+                    <h2 class="section-label">History and Culture</h2>
+                    <h3 class="history-title">
+                        2,200 Years <br>
+                        <span class="italic-light">of Legacy</span>
+                    </h3>
+                    <div class="history-paragraphs">
+                        <p>
+                            Known as Dong'ou in ancient times, Wenzhou is the birthplace of China's landscape poetry and
+                            the cradle of the Southern Opera (Nanxi).
+                        </p>
+                        <p>
+                            Beyond its artistic heritage, Wenzhou is globally renowned for the "Wenzhou Model"—a
+                            testament to the fierce entrepreneurial spirit and resilience of its people, who have built
+                            commercial networks spanning the globe.
+                        </p>
+                    </div>
+
+                    <div class="history-accent">
+                        <div class="accent-line"></div>
+                        <span class="accent-text">The Spirit of Ou</span>
+                    </div>
+                </div>
+
+                <div class="history-images">
+                    <div class="history-main-img animate-scale-in">
+                        <img src="./images/1.jpg"
+                            alt="Traditional Architecture" class="img-luminosity" referrerpolicy="no-referrer">
+                        <div class="img-gradient-overlay"></div>
+                    </div>
+
+                    <div class="history-secondary-img animate-slide-up">
+                        <img src="./images/2.jpg" alt="Calligraphy"
+                            referrerpolicy="no-referrer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="attractions">
+        <div class="attractions-container">
+            <div class="attractions-header">
+                <h2 class="attractions-title animate-fade-up">
+                    Breathtaking <span class="accent-red">Landscapes</span>
+                </h2>
+                <p class="attractions-subtitle animate-fade-up delay-1">
+                    From the misty peaks of Yandang to the tranquil flow of the Nanxi River, Wenzhou's natural beauty
+                    has inspired poets for millennia.
+                </p>
+            </div>
+
+            <div class="attractions-grid">
+                <!-- Wenzhou City in the Early Morning -->
+                <div class="attraction-card attraction-large animate-fade-up delay-1">
+                    <img src="./images/3.jpg" alt="Wenzhou City in the Early Morning"
+                        class="attraction-img" referrerpolicy="no-referrer">
+                    <div class="attraction-overlay"></div>
+                    <div class="attraction-content">
+                        <p class="attraction-subtitle">Wenzhou City in the Early Morning</p>
+                        <h3 class="attraction-name">Wenzhou City in the Early Morning</h3>
+                        <p class="attraction-desc">
+                             Wenzhou City in the Early Morning
+                        </p>
+                    </div>
+                </div>
+
+                <!--Miaoguo Temple  -->
+                <div class="attraction-card animate-fade-up delay-2">
+                    <img src="./images/4.jpg" alt="Miaoguo Temple" class="attraction-img"
+                        referrerpolicy="no-referrer">
+                    <div class="attraction-overlay"></div>
+                    <div class="attraction-content">
+                        <p class="attraction-subtitle">Historic Buddhist Temple</p>
+                        <h3 class="attraction-name">Miaoguo Temple</h3>
+                        <p class="attraction-desc">
+                            Founded in 1008 AD during the Northern Song Dynasty. Home to the legendary "Pig Head Bell" and serves as the seat of Wenzhou Buddhist Association.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ma'anchi Park -->
+                <div class="attraction-card animate-fade-up delay-3">
+                    <img src="./images/5.jpg" alt="Ma'anchi Park"
+                        class="attraction-img" referrerpolicy="no-referrer">
+                    <div class="attraction-overlay"></div>
+                    <div class="attraction-content">
+                        <p class="attraction-subtitle">Wenzhou's Monet Garden</p>
+                        <h3 class="attraction-name">Ma'anchi Tulip Garden</h3>
+                        <p class="attraction-desc">
+                            310,000 tulips across 6,500㎡ of stunning lakeside gardens. Spring's most Instagram-worthy spot with mountain-water landscapes and flower-lined paths. Free entry!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Lighthouse at Sunset -->
+                <div class="attraction-card attraction-large animate-fade-up delay-4">
+                    <img src="./images/6.jpg" alt="Lighthouse at Sunset"
+                        class="attraction-img" referrerpolicy="no-referrer">
+                    <div class="attraction-overlay"></div>
+                    <div class="attraction-content">
+                        <p class="attraction-subtitle">Coastal Landmark</p>
+                        <h3 class="attraction-name">Lighthouse at Sunset</h3>
+                        <p class="attraction-desc">
+                            A iconic beacon standing against golden skies, where the East China Sea meets the warm glow of dusk. A perfect spot for photographers and romantics alike.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gastronomy Section -->
+    <section class="gastronomy">
+        <div class="gastronomy-container">
+            <div class="gastronomy-grid">
+                <div class="gastronomy-text animate-fade-up">
+                    <div>
+                        <h2 class="gastronomy-title">
+                            The Taste of <br>
+                            <span class="italic-gold">Ou River</span>
+                        </h2>
+                        <p class="gastronomy-intro">
+                            Wenzhou cuisine, a vital branch of Zhejiang culinary tradition, emphasizes freshness,
+                            lightness, and the natural flavors of seafood.
+                        </p>
+                    </div>
+
+                    <div class="food-list">
+                        <div class="food-item">
+                            <h4 class="food-name">Wenzhou Fish Balls</h4>
+                            <p class="food-desc">Unlike round fish balls, these are irregular strips of fresh fish
+                                paste, offering a unique, chewy texture in a clear, peppery broth.</p>
+                        </div>
+                        <div class="food-item">
+                            <h4 class="food-name">Glutinous Rice (Nuomi Fan)</h4>
+                            <p class="food-desc">The quintessential Wenzhou breakfast. Steamed sticky rice topped with
+                                savory minced pork sauce and crispy youtiao (fried dough) bits.</p>
+                        </div>
+                        <div class="food-item">
+                            <h4 class="food-name">Fresh Seafood</h4>
+                            <p class="food-desc">Bordering the East China Sea, Wenzhou offers an abundance of incredibly
+                                fresh seafood, often simply steamed to preserve its natural sweetness.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gastronomy-images">
+                    <div class="food-main-img animate-scale-rotate">
+                        <img src="./images/7.jpg" alt="Wenzhou Seafood"
+                            referrerpolicy="no-referrer">
+                    </div>
+
+                    <div class="food-secondary-img-1 animate-slide-in-right">
+                        <img src="./images/8.jpg" alt="Fish Balls"
+                            referrerpolicy="no-referrer">
+                    </div>
+
+                    <div class="food-secondary-img-2 animate-slide-in-left">
+                        <img src="./images/9.jpg" alt="Glutinous Rice"
+                            referrerpolicy="no-referrer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="location-container">
+            <div class="location-header">
+                <div class="location-label animate-fade-up">
+                    <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <h2 class="section-label">Location</h2>
+                </div>
+                <h3 class="location-title animate-fade-up delay-1">
+                    Where the River <br>
+                    <span class="italic-gold">Meets the Sea</span>
+                </h3>
+                <p class="location-desc animate-fade-up delay-2">
+                    Situated on the southeastern coast of Zhejiang Province, Wenzhou is a vibrant port city surrounded
+                    by majestic mountains and the East China Sea.
+                </p>
+            </div>
+
+            <div class="location-map animate-fade-up delay-3">
+                <div class="map-shadow"></div>
+                <iframe src="https://maps.google.com/maps?q=Wenzhou,Zhejiang,China&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="100%" style="border: 0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="map-iframe"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section (AI Search) -->
+    <section class="explore">
+        <div class="explore-container">
+            <div class="explore-header">
+                <h2 class="explore-title">Discover Wenzhou</h2>
+                <p class="explore-subtitle">Ask anything about our local culture, food, or current events.</p>
+            </div>
+
+            <form class="explore-form" id="exploreForm">
+                <input type="text" id="exploreInput" placeholder="e.g., What are the famous local snacks in Wenzhou?"
+                    class="explore-input">
+                <button type="submit" id="exploreBtn" class="explore-btn">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    <svg class="loader-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                    </svg>
+                </button>
+            </form>
+
+            <div id="exploreResponse" class="explore-response hidden">
+                <div class="response-content"></div>
+                <div class="response-sources hidden">
+                    <h4 class="sources-title">Sources</h4>
+                    <ul class="sources-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wenzhou History & Culture Section -->
+    <section class="itinerary">
+        <div class="itinerary-container">
+            <div class="itinerary-grid">
+                <div class="itinerary-form-section">
+                    <h2 class="itinerary-title">Wenzhou <br><span class="italic-gold">History & Culture</span></h2>
+                    <p class="itinerary-intro">
+                        Discover 2,200 years of rich heritage. From the birthplace of Chinese landscape poetry to the cradle of Southern Opera, explore the cultural treasures that shaped this remarkable city.
+                    </p>
+
+                    <div class="culture-topics">
+                        <div class="culture-topic">
+                            <h4 class="topic-title">📜 Landscape Poetry</h4>
+                            <p class="topic-desc">Birthplace of China's landscape poetry tradition, inspiring poets for millennia with its misty mountains and flowing rivers.</p>
+                        </div>
+                        <div class="culture-topic">
+                            <h4 class="topic-title">🎭 Southern Opera (Nanxi)</h4>
+                            <p class="topic-desc">The cradle of Nanxi, one of China's oldest theatrical forms, originating during the Song Dynasty.</p>
+                        </div>
+                        <div class="culture-topic">
+                            <h4 class="topic-title">💼 Wenzhou Model</h4>
+                            <p class="topic-desc">A testament to the fierce entrepreneurial spirit that built global commercial networks.</p>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div class="itinerary-result-section">
+                    <div class="culture-showcase">
+                        <div class="culture-card">
+                            <h3 class="culture-card-title">Famous Personalities</h3>
+                            <ul class="culture-list">
+                                <li><strong>Wang Shizhen</strong> - Ming Dynasty philosopher & writer</li>
+                                <li><strong>Xie Lingyun</strong> - Pioneer of landscape poetry</li>
+                                <li><strong>Gao Zecheng</strong> - Founder of Southern Opera</li>
+                                <li><strong>Sun Yirang</strong> - Qing Dynasty scholar & educator</li>
+                            </ul>
+                        </div>
+                        <div class="culture-card">
+                            <h3 class="culture-card-title">Cultural Heritage Sites</h3>
+                            <ul class="culture-list">
+                                <li><strong>Jiangxin Islet</strong> - Poetry Island with twin pagodas</li>
+                                <li><strong>Miaoguo Temple</strong> - 1,000-year-old Buddhist temple</li>
+                                <li><strong>Yandang Mountain</strong> - UNESCO Global Geopark</li>
+                                <li><strong>Nanxi River</strong> - Ancient village landscapes</li>
+                            </ul>
+                        </div>
+                        <div class="culture-card">
+                            <h3 class="culture-card-title">Traditional Arts</h3>
+                            <ul class="culture-list">
+                                <li><strong>Wenzhou Opera</strong> - Unique local theatrical style</li>
+                                <li><strong>Ou Embroidery</strong> - Traditional needlework art</li>
+                                <li><strong>Wenzhou Paper-cutting</strong> - Folk art heritage</li>
+                                <li><strong>Traditional Medicine</strong> - Ancient healing practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wenzhou Promotional Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="video-bg-blur"></div>
+
+            <div class="video-content">
+                <div class="video-header">
+                    <div class="video-icon-wrapper">
+                        <svg class="video-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    <div class="video-title-wrapper">
+                        <h2 class="video-title">Wenzhou Promotional Video</h2>
+                        <p class="video-subtitle">Experience the beauty and charm of Zhejiang's coastal gem.</p>
+                    </div>
+                </div>
+
+                <div class="video-player-wrapper">
+                    <div class="video-player">
+                        <video id="wenzhouVideo" class="video-element" poster="./video/video-cover.jpg" controls>
+                            <source src="./video/wenzhou-promo.mp4" type="video/mp4">
+                            <p>Your browser does not support the video tag. Please download the video to watch.</p>
+                        </video>
+                        <div class="video-overlay" id="videoOverlay">
+                            <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-info">
+                    <div class="video-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">2,200+</span>
+                            <span class="stat-label">Years of History</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">9.5M</span>
+                            <span class="stat-label">Population</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">#1</span>
+                            <span class="stat-label">Business Hub</span>
+                        </div>
+                    </div>
+                    <p class="video-description">
+                        Discover Wenzhou, where ancient heritage meets modern innovation. From the misty peaks of Yandang Mountain to the bustling streets of the business district, experience a city that has inspired poets and entrepreneurs for millennia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© <span id="currentYear"></span> Wenzhou Tourism. </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
